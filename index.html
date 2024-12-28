@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Operation Echo OSINT</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script type="text/javascript">
+    function newSrc() { //changes iframe src based on menu selection
+  var e = document.getElementById("CameraMenu");
+  var newSrc = e.options[e.selectedIndex].value;
+  document.getElementById("MyFrame").src=newSrc;
+} 
+    </script>
+  </head>
+  <body>
+    <main>
+        <h1>CCTV</h1>  
+    </main>
+   <iframe src="https://wxyzwebcams.com/network/joe.php?url=https://cdn3.wowza.com/5/REFkVjRKS0dzbTYr/live/group1Delayed_360p/playlist.m3u8" style="width:450px;height:450px;overflow:scroll;" id="MyFrame"></iframe>
+    <BR>
+<select id="CameraMenu">
+  <option value="https://wxyzwebcams.com/network/joe.php?url=https://cdn3.wowza.com/5/REFkVjRKS0dzbTYr/live/group1Delayed_360p/playlist.m3u8">Camera 1</option>
+  <option value="https://www.quebec511.info/Carte/Fenetres/camera.ashx?id=3928&format=mp4">Camera 2</option>
+</select>
+<button onClick="newSrc();">Change Camera</button>
+  </body>
+</html>
